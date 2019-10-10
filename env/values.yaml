@@ -17,7 +17,7 @@ expose:
     exposer: Ingress
     http: "true"
     tlsacme: "false"
-    urltemplate: {{ echo "{{.Service}}-{{.Namespace}}.{{.Domain}}" | quote }}
+    urltemplate: {{ quote \{\{.Service\}\}-\{\{.Namespace\}\}.\{\{.Domain\}\}" }}
 jenkins:
   Servers:
     Global: {}
